@@ -35,9 +35,9 @@
                         >
                             <span class="sr-only">Open user menu</span>
                             @if(auth()->user()->profile_photo_path)
-                                <img src="{{ asset('storage').'/'.auth()->user()->profile_photo_path }}" alt="{{ auth()->user()->name }}" class="mr-2 rounded-full h-8 w-8 object-cover">
+                                <img src="{{ asset('storage').'/'.auth()->user()->profile_photo_path }}" alt="{{ auth()->user()->name }}" class="hidden md:block mr-2 rounded-full h-8 w-8 object-cover">
                             @else
-                                <div class="mr-2 relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                                <div class="hidden md:block mr-2 relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                                     <span class="font-medium text-gray-600 dark:text-gray-300">{{ auth()->user()->name[0] }}</span>
                                 </div>
                             @endif

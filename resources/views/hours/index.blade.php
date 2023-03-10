@@ -5,7 +5,7 @@
     </x-slot>
 
     @php($user = App\Models\User::find(request('user',auth()->id())))
-        <div class="overflow-x-auto relative shadow-md sm:rounded-lg bg-white">
+        <div class="overflow-x-auto relative shadow-md rounded-lg bg-white dark:bg-gray-800">
             @if($order_hours->count() === 0 && $technical_report_hours->count() === 0 && $other_hours->count() === 0)
                 <h1 class="p-6 text-gray-900">Nessuna ora disponibile</h1>
             @else
