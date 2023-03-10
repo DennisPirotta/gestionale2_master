@@ -1,32 +1,36 @@
-html{
-    &.dark{
-        input{
-            color-scheme: dark;
-        }
-        *{
-            scrollbar-width: auto;
-            scrollbar-color: #1f2937 #111827;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #111827;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #1f2937;
-            border: 3px solid #111827;
-        }
-        .overflow-x-auto{
-            &::-webkit-scrollbar-track {
-                background-color: #1f2937;
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color: #111827;
-                border: 3px solid #1f2937;
-            }
-        }
+.overflow-x-auto{
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    input{
+        color-scheme: dark;
+    }
+    *{
+        scrollbar-width: auto;
+        scrollbar-color: #1f2937 #111827;
     }
 
+    ::-webkit-scrollbar-track {
+        background: #111827;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #1f2937;
+        border: 3px solid #111827;
+    }
+    .overflow-x-auto{
+        &::-webkit-scrollbar-track {
+            background-color: #1f2937;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #111827;
+            border: 3px solid #1f2937;
+        }
+    }
+}
+@media (prefers-color-scheme: light) {
     *{
         scrollbar-width: auto;
         scrollbar-color: #e5e7eb #ffffff;
@@ -43,9 +47,3 @@ html{
         border: 3px solid #ffffff;
     }
 }
-.overflow-x-auto{
-    &::-webkit-scrollbar {
-        height: 12px;
-    }
-}
-
