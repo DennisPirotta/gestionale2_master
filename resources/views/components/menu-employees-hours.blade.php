@@ -31,7 +31,8 @@
             chart: {
                 height: 350,
                 type: 'bar',
-                toolbar: { show: false }
+                toolbar: { show: false },
+                background: 'transparent'
             },
             tooltip: { enabled: false },
             plotOptions: {

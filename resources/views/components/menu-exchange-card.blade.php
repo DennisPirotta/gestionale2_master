@@ -12,7 +12,7 @@
             <span class="text-gray-400 align-bottom">
                 {{ __('Last Update') }}
             </span>
-            <span class="border-l ml-2 pl-2 ">
+            <span class="border-l ml-2 pl-2 dark:text-white">
                 {{ $exchanges->last()->value }}
             </span>
         </div>

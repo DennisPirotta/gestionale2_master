@@ -23,9 +23,12 @@
             chart: {
                 height: 350,
                 type: 'donut',
-                toolbar: { show: false }
+                toolbar: { show: false },
+                background: 'transparent'
             },
-            // tooltip: { enabled: false },
+            theme: {
+                mode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            },
             plotOptions: {
                 bar: {
                     borderRadius: 10,
