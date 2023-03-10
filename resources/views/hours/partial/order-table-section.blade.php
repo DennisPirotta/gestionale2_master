@@ -1,11 +1,11 @@
 @if($order_hours->count() > 0)
-    <tr class="bg-gray-50">
+    <tr class="bg-gray-50 dark:bg-gray-400 dark:text-white">
         <td class="py-2 px-4 border-l">{{__('Orders')}}</td>
         <td colspan="{{$period->count()+1}}" class="py-2 px-4"></td>
     </tr>
     @foreach($order_hours as $order_hour)
-        <tr class="bg-gray-100 border-b">
-            <th scope="row" class="border-r p-1.5">
+        <tr class="bg-gray-100 border-b  dark:bg-gray-500 dark:text-white dark:border-gray-400">
+            <th scope="row" class="border-r p-1.5 dark:border-gray-400">
                 <b>{{ $order_hour->first()->order->innerCode }}</b>
                 <p class="mb-0">{{ $order_hour->first()->order->customer->name }}</p>
                 <small>{{ $order_hour->first()->order->description }}</small> <br>
@@ -13,7 +13,7 @@
             </th>
             @php($count = 0)
             @foreach($period as $day)
-                <td class="border-r @if($day->isWeekend() || $day->isHoliday()) bg-blue-200 @endif ">
+                <td class="border-r dark:border-gray-400 @if($day->isWeekend() || $day->isHoliday()) bg-blue-200 dark:bg-blue-300 @endif ">
                     <div    contenteditable="true"
                             data-order_id="{{ $order_hour->first()->order->id }}"
                             data-date="{{ $day->format('Y-m-d') }}"

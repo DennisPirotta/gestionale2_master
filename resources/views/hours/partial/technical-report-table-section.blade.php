@@ -1,17 +1,17 @@
 @if($technical_report_hours->count() > 0)
-    <tr class="bg-gray-50">
+    <tr class="bg-gray-50 dark:bg-gray-400 dark:text-white">
         <td class="py-2 px-4 border-l">{{__('Technical Reports')}}</td>
         <td colspan="{{$period->count()+1}}" class="py-2 px-4"></td>
     </tr>
     @foreach($technical_report_hours as $technical_report_hour)
-        <tr class="bg-gray-100 border-b">
+        <tr class="bg-gray-100 border-b dark:bg-gray-500 dark:text-white dark:border-gray-400">
             <th scope="row" class="border-r p-1.5">
                 {{ $technical_report_hour->first()->technical_report->number }} <br>
                 {{ $technical_report_hour->first()->technical_report->customer->name }}
             </th>
             @php($count=0)
             @foreach($period as $day)
-                <td class="border-r @if($day->isWeekend() || $day->isHoliday()) bg-blue-200 @endif ">
+                <td class="border-r dark:border-gray-400 @if($day->isWeekend() || $day->isHoliday()) bg-blue-200 dark:bg-blue-300 @endif ">
                     <div    contenteditable="true"
                             data-technical_report_id="{{ $technical_report_hour->first()->technical_report->id }}"
                             data-date="{{ $day->format('Y-m-d') }}"
