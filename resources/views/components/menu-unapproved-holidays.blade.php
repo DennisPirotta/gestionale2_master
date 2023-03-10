@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="pt-3 pb-2">
-        <ol class="overflow-y-auto fancy-scrollbar max-h-60 space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400">
+        <ol class="overflow-y-auto max-h-60 space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400">
             @foreach($holidays as $user => $user_holidays)
                 @php($user = \App\Models\User::find($user))
                 <div class="flex items-center space-x-4 ml-5 mr-16">

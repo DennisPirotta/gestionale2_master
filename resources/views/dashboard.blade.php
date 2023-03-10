@@ -1,5 +1,5 @@
 <x-app-layout>
-    @vite('resources/scss/app.scss')
+    @vite('resources/scss/loader.scss')
     <x-slot name="path">
         <x-breadcrumb-element route="dashboard.index" :title="__('Dashboard')"/>
     </x-slot>
