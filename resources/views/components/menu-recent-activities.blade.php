@@ -1,6 +1,6 @@
 <div class="row-span-2 p-6 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
     <div class="flex items-center justify-center md:justify-start">
-        <div class="text-2xl justify-start flex items-end">
+        <div class="text-2xl justify-start flex items-end dark:text-white">
             <span>
                 {{ __('Recent Activities') }}
             </span>

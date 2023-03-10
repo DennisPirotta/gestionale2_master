@@ -1,6 +1,6 @@
 <div class="row-span-2 p-6 bg-white shadow-lg border border-gray-200 rounded-lg w-full dark:border-gray-700 dark:bg-gray-800">
     <div class="flex items-center justify-center md:justify-start">
-        <div class="text-2xl justify-start flex items-end">
+        <div class="text-2xl justify-start flex items-end dark:text-white">
             <span>
                 {{ __('Employees Hours') }}
             </span>
@@ -22,6 +22,9 @@
         let data = []
         Object.keys(hours).filter( (key) => hours[key] > 0 ? data.push({ x:key,y:hours[key],fillColor:"#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase() }) : '')
         let options = {
+            theme: {
+                mode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            },
             series: [{
                 data: data
             }],
