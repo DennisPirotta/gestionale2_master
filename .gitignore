@@ -3,7 +3,6 @@
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
 /vendor
 .env
 .env.backup
@@ -20,4 +19,6 @@ yarn-error.log
 
 # Project exclude paths
 /storage/app/
-/storage/framework/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
