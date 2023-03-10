@@ -12,7 +12,7 @@
                 <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-y-3">
                     <div class="flex items-center justify-center md:justify-start">
                         <div class="text-3xl justify-start flex items-end">
-                        <span>
+                        <span class="dark:text-white">
                             {{ \App\Models\User::find(request('user',auth()->id()))->surname }}
                             {{ \App\Models\User::find(request('user',auth()->id()))->name }}
                         </span>
