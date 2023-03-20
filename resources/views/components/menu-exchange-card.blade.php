@@ -13,7 +13,7 @@
                 {{ __('Last Update') }}
             </span>
             <span class="border-l ml-2 pl-2 dark:text-white">
-                {{ $exchanges->last()->value }}
+                {{ $exchanges->last()->value ?? '-' }}
             </span>
         </div>
     </div>

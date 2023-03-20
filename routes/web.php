@@ -16,8 +16,6 @@ use App\Http\Controllers\OrderDetailsController;
 use App\Http\Controllers\TechnicalReportController;
 use App\Http\Controllers\TechnicalReportDetailsController;
 use App\Http\Controllers\UserController;
-use App\Models\Exchange;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*

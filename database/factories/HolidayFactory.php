@@ -24,6 +24,7 @@ class HolidayFactory extends Factory
             'end' => fake()->dateTimeInInterval($start, '+10 days')->setTime(0, 0, 0),
             'approved' => fake()->boolean,
             'user_id' => User::all()->random()->id,
+            'permission' => fake()->boolean
         ];
     }
 }
